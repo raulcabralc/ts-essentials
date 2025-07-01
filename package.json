@@ -1,0 +1,19 @@
+{
+  "name": "ts-essentials",
+  "version": "1.0.0",
+  "description": "TypeScript essential knowledge I'm currently learning from André Iacono's course in Udemy.",
+  "main": "aula.js",
+  "scripts": {
+    "aula": "node aula.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/raulcabralc/ts-essentials.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/raulcabralc/ts-essentials/issues"
+  },
+  "homepage": "https://github.com/raulcabralc/ts-essentials#readme"
+}

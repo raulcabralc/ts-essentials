@@ -6,6 +6,15 @@ const rl = readline.createInterface({
   output: process.stdout,
 });
 
+const cores = {
+  reset: "\x1b[0m",
+  bright: "\x1b[1m",
+
+  green: "\x1b[32m",
+  yellow: "\x1b[33m",
+  blue: "\x1b[34m",
+};
+
 console.clear();
 
 function createAula(aulaNum, aulaNome) {
@@ -15,12 +24,27 @@ function createAula(aulaNum, aulaNome) {
   writeFileSync(`./${aula}/index.ts`, "");
 }
 
-console.log("Iniciando criador de diretório para aula...\n");
-rl.question("Número: ", (num) => {
-  rl.question("Tópico: ", (name) => {
-    createAula(num, name);
-    console.clear();
-    console.log(`\nAula ${num} criada com o nome ${name}\n`);
-    rl.close();
+function startApp() {
+  console.log(
+    cores.blue + "Iniciando criador de diretório para aula...\n" + cores.reset
+  );
+  rl.question(`${cores.yellow + cores.bright}Número:${cores.reset} `, (num) => {
+    rl.question(
+      `${cores.yellow + cores.bright}Tópico:${cores.reset} `,
+      (name) => {
+        createAula(num, name.toLowerCase());
+        console.clear();
+        console.log(
+          `${cores.reset}\n${cores.green + cores.bright}✓${cores.reset} Aula ${
+            cores.green + cores.bright
+          }${num}${cores.reset} criada com o nome ${
+            cores.green + cores.bright
+          }${name}${cores.reset}!\n`
+        );
+        rl.close();
+      }
+    );
   });
-});
+}
+
+startApp();
