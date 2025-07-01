@@ -5,7 +5,7 @@
   "main": "aula.js",
   "scripts": {
     "aula": "node aula.js",
-    "exercicio": "node exercicio.js"
+    "exer": "node exercicio.js"
   },
   "repository": {
     "type": "git",
