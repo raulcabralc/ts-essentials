@@ -4,7 +4,8 @@
   "description": "TypeScript essential knowledge I'm currently learning from André Iacono's course in Udemy.",
   "main": "aula.js",
   "scripts": {
-    "aula": "node aula.js"
+    "aula": "node aula.js",
+    "exercicio": "node exercicio.js"
   },
   "repository": {
     "type": "git",
