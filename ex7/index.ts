@@ -1,4 +1,9 @@
-class Person {
+interface PersonBasics {
+  name: string;
+  age: number;
+}
+
+class Person implements PersonBasics {
   constructor(public name: string, public age: number) {}
 }
 
